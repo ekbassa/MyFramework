@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\NUnit.3.11.0\build\NUnit.props" Condition="Exists('..\packages\NUnit.3.11.0\build\NUnit.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B7BA7DFB-0AF0-4740-B32B-39A137FBBC42}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TcoTestingFrameWork</RootNamespace>
+    <AssemblyName>TcoTestingFrameWork</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ExcelDataReader, Version=3.4.2.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.3.4.2\lib\net45\ExcelDataReader.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ExcelDataReader.DataSet, Version=3.4.2.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.DataSet.3.4.2\lib\net35\ExcelDataReader.DataSet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ExtentReports, Version=3.1.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExtentReports.3.1.3\lib\ExtentReports.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.5.10\lib\net45\NLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SeleniumExtras.WaitHelpers, Version=3.11.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetSeleniumExtras.WaitHelpers.3.11.0\lib\net45\SeleniumExtras.WaitHelpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.3.0\lib\netstandard1.1\System.Buffers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebDriver, Version=3.14.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.3.14.0\lib\net45\WebDriver.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=3.14.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.Support.3.14.0\lib\net45\WebDriver.Support.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+  <ItemGroup>
+    <Compile Include="BaseClasses\BaseClass.cs" />
+    <Compile Include="BaseClasses\PomPageBase.cs" />
+    <Compile Include="ComponentHelper\BrowserHelper.cs" />
+    <Compile Include="ComponentHelper\ButtonHelper.cs" />
+    <Compile Include="ComponentHelper\CheckBoxHelper.cs" />
+    <Compile Include="ComponentHelper\DropDownListHelper.cs" />
+    <Compile Include="ComponentHelper\ExcelReaderHelper.cs" />
+    <Compile Include="ComponentHelper\GenericHelper.cs" />
+    <Compile Include="ComponentHelper\JavaScriptPopUpHelper.cs" />
+    <Compile Include="ComponentHelper\LinkHelper.cs" />
+    <Compile Include="ComponentHelper\MouseActionsHelper.cs" />
+    <Compile Include="ComponentHelper\NavigationHelper.cs" />
+    <Compile Include="ComponentHelper\RadioButtonHelper.cs" />
+    <Compile Include="ComponentHelper\TableHelper.cs" />
+    <Compile Include="ComponentHelper\TextBoxHelper.cs" />
+    <Compile Include="ComponentHelper\WindowHelper.cs" />
+    <Compile Include="Configurations\AppConfigReader.cs" />
+    <Compile Include="Configurations\BrowserType.cs" />
+    <Compile Include="CustomException\WebDriverNotFound.cs" />
+    <Compile Include="DataDriven\DDScripts\LoginFromExcelFile.cs" />
+    <Compile Include="ExcelDataReader\ExcelDataReaderTest.cs" />
+    <Compile Include="Interfaces\Iconfig.cs" />
+    <Compile Include="PageObjectModelNazarene\QuotationsList.cs" />
+    <Compile Include="PageObjectModel\PomDocketList.cs" />
+    <Compile Include="PageObjectModel\PomLogin.cs" />
+    <Compile Include="PageObjectModel\PomPassengerInfoPage.cs" />
+    <Compile Include="PageObjectModel\PomWelcomToTCO.cs" />
+    <Compile Include="PageObjectModel\SearchClient.cs" />
+    <Compile Include="PageObjectModel\TcoPackageLeftPanel\PomTransfer.cs" />
+    <Compile Include="Settings\AppConfigKeys.cs" />
+    <Compile Include="Settings\ObjectRepository.cs" />
+    <Compile Include="TestScripts\Isropa\ClerkMenu\CheckIfcalimityIsAppropriate.cs" />
+    <Compile Include="TestScripts\Isropa\ClerkMenu\GetAllDocketsNumberFromTheDocketListPage.cs" />
+    <Compile Include="TestScripts\Isropa\ClerkMenu\GetCalimityFundForExistingDocket.cs" />
+    <Compile Include="TestScripts\Isropa\ClerkMenu\GetDocketPaxNumber.cs" />
+    <Compile Include="TestScripts\Isropa\ClerkMenu\LeftPanel\AccomodationOnly.cs" />
+    <Compile Include="TestScripts\Isropa\ClerkMenu\LeftPanel\CarRental.cs" />
+    <Compile Include="TestScripts\Isropa\ClerkMenu\LeftPanel\Excursions.cs" />
+    <Compile Include="TestScripts\Isropa\ClerkMenu\LeftPanel\FlightsReservation.cs" />
+    <Compile Include="TestScripts\Isropa\ClerkMenu\LeftPanel\HotelList.cs" />
+    <Compile Include="TestScripts\Isropa\ClerkMenu\LeftPanel\ServicesReservation.cs" />
+    <Compile Include="TestScripts\Isropa\ClerkMenu\LeftPanel\SiteList.cs" />
+    <Compile Include="TestScripts\Isropa\ClerkMenu\LeftPanel\TransferReservation.cs" />
+    <Compile Include="TestScripts\Isropa\ClerkMenu\OpenFilesOpenToday.cs" />
+    <Compile Include="TestScripts\Isropa\ClerkMenu\PrintInvoiceToScreen.cs" />
+    <Compile Include="TestScripts\Isropa\ClerkMenu\SelectClerkMenuFromMainPage.cs" />
+    <Compile Include="TestScripts\Isropa\ClerkMenu\SelectTheFirstDocketFromTheGrid.cs" />
+    <Compile Include="TestScripts\Isropa\LogIn\IsropaLogin.cs" />
+    <Compile Include="TestScripts\Isropa\ReservationCentre\ReservationCentreEnterDocketNumber.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestScripts\Isropa\TestPageObjectModel\PomTest.cs" />
+    <Compile Include="TestScripts\Nazarene\Accounting\NazAcounting.cs" />
+    <Compile Include="TestScripts\Nazarene\Incoming\SelectAllCheckBoxFromQuotationMainPage.cs" />
+    <Compile Include="TestScripts\Nazarene\Incoming\SelectIncoming fromMainMenu.cs" />
+    <Compile Include="TestScripts\Nazarene\NazClerkMenu.cs" />
+    <Compile Include="TestScripts\Nazarene\NazLogin.cs" />
+    <Compile Include="TestScripts\TempScripts\Class1.cs" />
+    <Compile Include="TestScripts\TempScripts\DropDownList.cs" />
+    <Compile Include="TestScripts\TempScripts\GetAllTableElements.cs" />
+    <Compile Include="TestScripts\TempScripts\TestCalendarClerkMenu.cs" />
+    <Compile Include="VeredHasharon\PomBase\BaseMainHeaderMenu.cs" />
+    <Compile Include="VeredHasharon\POM\HotelDatesAndregions.cs" />
+    <Compile Include="VeredHasharon\POM\HotelPom.cs" />
+    <Compile Include="VeredHasharon\POM\HotelTitleAndIcons.cs" />
+    <Compile Include="VeredHasharon\POM\LoginPagePOM.cs" />
+    <Compile Include="VeredHasharon\POM\QuotationActionButton.cs" />
+    <Compile Include="VeredHasharon\POM\QuotationCheckboxes.cs" />
+    <Compile Include="VeredHasharon\POM\QuotationExtraDetails.cs" />
+    <Compile Include="VeredHasharon\POM\QuotationServices.cs" />
+    <Compile Include="VeredHasharon\POM\QuotationSheet.cs" />
+    <Compile Include="VeredHasharon\POM\QuotationSheetTabs.cs" />
+    <Compile Include="VeredHasharon\POM\QuotationsList.cs" />
+    <Compile Include="VeredHasharon\POM\QutationMainDetails.cs" />
+    <Compile Include="VeredHasharon\POM\Services.cs" />
+    <Compile Include="VeredHasharon\POM\TopMenu.cs" />
+    <Compile Include="VeredHasharon\POM\WelcomToTcoPage.cs" />
+    <Compile Include="VeredHasharon\Settings\ObjectRepo.cs" />
+    <Compile Include="VeredHasharon\TestBase\VeredBaseTest.cs" />
+    <Compile Include="VeredHasharon\TestBase\BrowserType.cs" />
+    <Compile Include="VeredHasharon\TestBase\WebDriverFactory.cs" />
+    <Compile Include="VeredHasharon\TestScripts\ActionTests\FillQuoteDetails.cs" />
+    <Compile Include="VeredHasharon\TestScripts\ActionTests\OpenNewQuotationTest.cs" />
+    <Compile Include="VeredHasharon\TestScripts\Functionality Testing\ExtractDataFromMainQuoteDetails.cs" />
+    <Compile Include="VeredHasharon\TestScripts\Functionality Testing\ExtractDataFromQuotationExtraDetails.cs" />
+    <Compile Include="VeredHasharon\TestScripts\Functionality Testing\Hotels\HotelsTestingClass.cs" />
+    <Compile Include="VeredHasharon\TestScripts\Functionality Testing\SelectIncomingTours.cs" />
+    <Compile Include="VeredHasharon\TestScripts\Functionality Testing\QuotationServicesActionsTest.cs" />
+    <Compile Include="VeredHasharon\TestScripts\Functionality Testing\TestQuotationButtonRegion.cs" />
+    <Compile Include="VeredHasharon\TestScripts\Functionality Testing\TestQuoteCheckBoxes.cs" />
+    <Compile Include="VeredHasharon\TestScripts\GetUserName.cs" />
+    <Compile Include="VeredHasharon\TestScripts\LogInVeredHasharon.cs" />
+    <Compile Include="VeredHasharon\TestScripts\OpenQuotationById.cs" />
+    <Compile Include="VeredHasharon\TestScripts\TestCloning.cs" />
+    <Compile Include="VeredHasharon\VeredHelper\ComboBoxHelper.cs" />
+    <Compile Include="VeredHasharon\VeredHelper\MouseHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Documentation\Building New Project.docx" />
+    <None Include="license" />
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="NLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Nazarene\NazarenePOM\" />
+    <Folder Include="Nazarene\NazareneTestScripts\" />
+    <Folder Include="Reports\" />
+    <Folder Include="TestScripts\Nazarene\NazarenePom\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="chromedriver.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="extent-config.xml" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Selenium.Firefox.WebDriver.0.22.0\build\Selenium.Firefox.WebDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.Firefox.WebDriver.0.22.0\build\Selenium.Firefox.WebDriver.targets'))" />
+    <Error Condition="!Exists('..\packages\Selenium.InternetExplorer.WebDriver.3.14\build\Selenium.InternetExplorer.WebDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.InternetExplorer.WebDriver.3.14\build\Selenium.InternetExplorer.WebDriver.targets'))" />
+    <Error Condition="!Exists('..\packages\Selenium.Chrome.WebDriver.2.43\build\Selenium.Chrome.WebDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.Chrome.WebDriver.2.43\build\Selenium.Chrome.WebDriver.targets'))" />
+    <Error Condition="!Exists('..\packages\NUnit.3.11.0\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit.3.11.0\build\NUnit.props'))" />
+    <Error Condition="!Exists('..\packages\Selenium.WebDriver.ChromeDriver.2.43.0\build\Selenium.WebDriver.ChromeDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.ChromeDriver.2.43.0\build\Selenium.WebDriver.ChromeDriver.targets'))" />
+  </Target>
+  <Import Project="..\packages\Selenium.Firefox.WebDriver.0.22.0\build\Selenium.Firefox.WebDriver.targets" Condition="Exists('..\packages\Selenium.Firefox.WebDriver.0.22.0\build\Selenium.Firefox.WebDriver.targets')" />
+  <Import Project="..\packages\Selenium.InternetExplorer.WebDriver.3.14\build\Selenium.InternetExplorer.WebDriver.targets" Condition="Exists('..\packages\Selenium.InternetExplorer.WebDriver.3.14\build\Selenium.InternetExplorer.WebDriver.targets')" />
+  <Import Project="..\packages\Selenium.Chrome.WebDriver.2.43\build\Selenium.Chrome.WebDriver.targets" Condition="Exists('..\packages\Selenium.Chrome.WebDriver.2.43\build\Selenium.Chrome.WebDriver.targets')" />
+  <Import Project="..\packages\Selenium.WebDriver.ChromeDriver.2.43.0\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.ChromeDriver.2.43.0\build\Selenium.WebDriver.ChromeDriver.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
