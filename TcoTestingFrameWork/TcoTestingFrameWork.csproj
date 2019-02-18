@@ -155,6 +155,7 @@
     <Compile Include="TestScripts\TempScripts\DropDownList.cs" />
     <Compile Include="TestScripts\TempScripts\GetAllTableElements.cs" />
     <Compile Include="TestScripts\TempScripts\TestCalendarClerkMenu.cs" />
+    <Compile Include="VeredHasharonDemo\PomLogin.cs" />
     <Compile Include="VeredHasharon\PomBase\BaseMainHeaderMenu.cs" />
     <Compile Include="VeredHasharon\POM\HotelDatesAndregions.cs" />
     <Compile Include="VeredHasharon\POM\HotelPom.cs" />
