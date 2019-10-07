@@ -11,7 +11,10 @@ namespace TcoTestingFrameWork.BassamScipts
         public void SentMes()
         {
             Console.WriteLine("hello World");
-
+        }
+        public void ReciveMes()
+        {
+            Console.WriteLine("Iam Reciveing Messages");
         }
     }
 }
