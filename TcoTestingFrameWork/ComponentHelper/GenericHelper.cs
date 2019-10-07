@@ -3,7 +3,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using System;
 using System.Globalization;
-using ExpectedConditions = SeleniumExtras.WaitHelpers.ExpectedConditions;
+//using ExpectedConditions = SeleniumExtras.WaitHelpers.ExpectedConditions;
 using TcoTestingFrameWork.VeredHasharon.POM;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TcoTestingFrameWork.ComponentHelper;
