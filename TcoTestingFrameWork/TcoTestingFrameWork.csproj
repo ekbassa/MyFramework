@@ -123,6 +123,7 @@
   <ItemGroup>
     <Compile Include="BaseClasses\BaseClass.cs" />
     <Compile Include="BaseClasses\PomPageBase.cs" />
+    <Compile Include="BassamScipts\HelloClass.cs" />
     <Compile Include="ComponentHelper\BrowserHelper.cs" />
     <Compile Include="ComponentHelper\ButtonHelper.cs" />
     <Compile Include="ComponentHelper\CheckBoxHelper.cs" />
@@ -234,7 +235,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BassamScipts\" />
     <Folder Include="Nazarene\NazarenePOM\" />
     <Folder Include="Nazarene\NazareneTestScripts\" />
     <Folder Include="Reports\" />
